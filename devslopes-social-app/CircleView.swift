@@ -1,15 +1,15 @@
 //
-//  MaterialView.swift
+//  CircleView.swift
 //  devslopes-social-app
 //
-//  Created by Steven Perkowski on 10/5/16.
+//  Created by Steven Perkowski on 10/9/16.
 //  Copyright © 2016 Steven Perkowski. All rights reserved.
 //
 
 import UIKit
 
-class MaterialView: UIView {
-
+class CircleView: UIImageView {
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -17,7 +17,12 @@ class MaterialView: UIView {
         layer.shadowOpacity = 0.8
         layer.shadowRadius = 5.0
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        layer.cornerRadius = 2.0
+    }
+
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        layer.cornerRadius = self.frame.width / 2
     }
     
+
 }
