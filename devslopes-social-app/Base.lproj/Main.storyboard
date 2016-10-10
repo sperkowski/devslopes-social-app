@@ -134,7 +134,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kjo-y7-Hf9" customClass="MaterialView" customModule="devslopes_social_app" customModuleProvider="target">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="oKg-T3-Nc4">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="oKg-T3-Nc4">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="9Rz-0e-FcA"/>
                                             <constraint firstAttribute="height" constant="38" id="DWe-XO-Ed4"/>
@@ -150,6 +150,7 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="oKg-T3-Nc4" firstAttribute="leading" secondItem="Kjo-y7-Hf9" secondAttribute="leading" constant="16" id="7z1-LT-1RQ"/>
                                     <constraint firstAttribute="height" constant="65" id="9LA-b1-wax"/>
@@ -157,6 +158,9 @@
                                     <constraint firstItem="5BT-a4-L1t" firstAttribute="centerY" secondItem="oKg-T3-Nc4" secondAttribute="centerY" id="Wid-WH-Bo4"/>
                                     <constraint firstItem="oKg-T3-Nc4" firstAttribute="top" secondItem="Kjo-y7-Hf9" secondAttribute="top" constant="20" id="nIF-zW-4NX"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2ZY-u8-Xsf" appends="YES" id="sKg-uk-Ifx"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tR2-Pu-9vn" customClass="MaterialView" customModule="devslopes_social_app" customModuleProvider="target">
                                 <subviews>
@@ -306,6 +310,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqE-Wn-YzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2ZY-u8-Xsf">
+                    <connections>
+                        <action selector="signOutTapped:" destination="d7W-4I-ejX" id="hCe-9Z-Vdq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="844" y="35.532233883058474"/>
         </scene>
