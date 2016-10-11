@@ -19,6 +19,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        DataService.ds.REF_POSTS.observe(FIRDataEventType.value) { (snapshot: FIRDataSnapshot) in
+            print(snapshot.value)
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
